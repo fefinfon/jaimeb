@@ -50,8 +50,9 @@
     }
 
     #background, #torso, #head, #icon {
-        position: static; /* Remove absolute positioning for stacking on small screens */
+        position: relative; /* Change to relative for stacking on small screens */
         transform: none; /* Remove translation */
+        margin: 10px auto; /* Add margin for spacing and centering */
     }
 }
     </style>
