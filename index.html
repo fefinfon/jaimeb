@@ -18,11 +18,25 @@
         }
 
         #background, #torso, #head, #icon {
-            width: 100%; /* Make images fill the container */
-            height: auto; /* Maintain aspect ratio */
-            display: block; /* Ensure block-level display for centering */
-            margin: 0 auto; /* Center the images */
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
         }
+
+            @media only screen and (max-width: 400px) {
+            body {
+                flex-direction: column; /* Stack elements vertically on small screens */
+            }
+
+            #imageContainer {
+                width: 100%; /* Full width for stacking on small screens */
+            }
+
+             #background, #torso, #head, #icon {
+                max-width: 100%; /* Ensure images don't exceed their container width */
+                width: 50%; /* Set images to 50% of their original size on mobile */
+            }
 
         #background {
             z-index: 1; /* Bottommost layer */
