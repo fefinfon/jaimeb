@@ -39,6 +39,21 @@
         #icon {
             z-index: 4; /* Topmost layer */
         }
+        /* Responsive Styles */
+@media only screen and (max-width: 600px) {
+    body {
+        flex-direction: column; /* Stack elements vertically on small screens */
+    }
+
+    #imageContainer {
+        width: 80%; /* Adjust container width as needed for smaller screens */
+    }
+
+    #background, #torso, #head, #icon {
+        position: static; /* Remove absolute positioning for stacking on small screens */
+        transform: none; /* Remove translation */
+    }
+}
     </style>
 </head>
 <body>
