@@ -24,20 +24,6 @@
             transform: translate(-50%, -50%);
         }
 
-            @media only screen and (max-width: 400px) {
-            body {
-                flex-direction: column; /* Stack elements vertically on small screens */
-            }
-
-            #imageContainer {
-                width: 100%; /* Full width for stacking on small screens */
-            }
-
-             #background, #torso, #head, #icon {
-                max-width: 100%; /* Ensure images don't exceed their container width */
-                width: 50%; /* Set images to 50% of their original size on mobile */
-            }
-
         #background {
             z-index: 1; /* Bottommost layer */
         }
@@ -54,7 +40,7 @@
             z-index: 4; /* Topmost layer */
         }
         /* Responsive Styles */
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 800px) {
     body {
         flex-direction: column; /* Stack elements vertically on small screens */
     }
@@ -64,7 +50,7 @@
     }
 
      #background, #torso, #head, #icon {
-        max-width: 100%; /* Ensure images don't exceed their container width */
+        max-width: 50%; /* Ensure images don't exceed their container width */
         width: 50%; /* Set images to 50% of their original size on mobile */
     }
 }
