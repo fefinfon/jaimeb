@@ -49,13 +49,9 @@
         width: 100%; /* Full width for stacking on small screens */
     }
 
-    #background,
-    #torso,
-    #head,
-    #icon {
-        width: 100%; /* Set width explicitly */
-        max-width: none; /* Remove max-width constraint */
-        height: auto; /* Maintain aspect ratio */
+     #background, #torso, #head, #icon {
+        max-width: 100%; /* Ensure images don't exceed their container width */
+        width: 50%; /* Set images to 50% of their original size on mobile */
     }
 }
     </style>

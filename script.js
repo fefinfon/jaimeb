@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     // Set random images for each element
-    setRandomImage(document.getElementById("torso"), "torso", 2); // Assuming you have 3 torso images
+    setRandomImage(document.getElementById("torso"), "torso", 36); // Assuming you have 3 torso images
     setRandomImage(document.getElementById("head"), "head", 35); // Assuming you have 3 head images
     setRandomImage(document.getElementById("background"), "background", 3); // Assuming you have 3 background images
     setRandomImage(document.getElementById("icon"), "icon", 3); // Assuming you have 3 icon images
