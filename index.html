@@ -11,6 +11,7 @@
             justify-content: center;
             align-items: center;
             height: 100vh;
+            position: relative; /* Add this to position the button relative to the body */
         }
 
         #imageContainer {
@@ -39,6 +40,19 @@
         #icon {
             z-index: 4; /* Topmost layer */
         }
+
+         #refreshButton {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: transparent;
+            border: none;
+            color: transparent;
+            cursor: pointer;
+            z-index: 5; /* Ensure the button is on top of other elements */
+        }
+        
         /* Responsive Styles */
 @media only screen and (max-width: 800px) {
     body {
@@ -62,6 +76,8 @@
         <img id="torso" src="" alt="Torso">
         <img id="head" src="" alt="Head">
         <img id="icon" src="" alt="Icon">
+        <!-- Invisible Refresh Button -->
+        <button id="refreshButton" onclick="location.reload()" title="Refresh"></button>
     </div>
     <script src="script.js"></script>
 </body>
