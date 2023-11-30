@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jaimito Generator</title>
+    <style>
+        body {
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        #imageContainer {
+            width: 100%; /* Adjust container width as needed */
+        }
+
+        #background, #torso, #head, #icon {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        #background {
+            z-index: 1; /* Bottommost layer */
+        }
+
+        #torso {
+            z-index: 2;
+        }
+
+        #head {
+            z-index: 3;
+        }
+
+        #icon {
+            z-index: 4; /* Topmost layer */
+        }
+        /* Responsive Styles */
+@media only screen and (max-width: 400px) {
+    body {
+        flex-direction: column; /* Stack elements vertically on small screens */
+    }
+
+    #imageContainer {
+        width: 100%; /* Full width for stacking on small screens */
+    }
+
+    #background,
+    #torso,
+    #head,
+    #icon {
+        width: 100%; /* Set width explicitly */
+        max-width: none; /* Remove max-width constraint */
+        height: auto; /* Maintain aspect ratio */
+    }
+}
+    </style>
+</head>
+<body>
+    <div id="imageContainer">
+        <img id="background" src="" alt="Background">
+        <img id="torso" src="" alt="Torso">
+        <img id="head" src="" alt="Head">
+        <img id="icon" src="" alt="Icon">
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
