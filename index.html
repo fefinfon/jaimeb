@@ -14,14 +14,14 @@
         }
 
         #imageContainer {
-            width: 80%; /* Adjust container width as needed */
+            position: relative;
         }
 
         #background, #torso, #head, #icon {
             position: absolute;
-            height: auto; /* Maintain aspect ratio */
-            display: block; /* Ensure block-level display for centering */
-            margin: 0 auto; /* Center the images */
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
         }
 
         #background {
@@ -39,19 +39,22 @@
         #icon {
             z-index: 4; /* Topmost layer */
         }
-        
         /* Responsive Styles */
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 400px) {
     body {
         flex-direction: column; /* Stack elements vertically on small screens */
     }
 
     #imageContainer {
-        width: 90%; /* Adjust container width for better mobile appearance */
+        width: 100%; /* Full width for stacking on small screens */
     }
 
-    #background, #torso, #head, #icon {
-        max-width: 100%; /* Ensure images don't exceed their container width */
+    #background,
+    #torso,
+    #head,
+    #icon {
+        max-width: 100%; /* Set maximum width to the screen width */
+        height: auto; /* Maintain aspect ratio */
     }
 }
     </style>
