@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jaimito Generator</title>
+    <style>
+        body {
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        #imageContainer {
+            position: relative;
+        }
+
+        #background, #torso, #head, #icon {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        #background {
+            z-index: 1; /* Bottommost layer */
+        }
+
+        #torso {
+            z-index: 2;
+        }
+
+        #head {
+            z-index: 3;
+        }
+
+        #icon {
+            z-index: 4; /* Topmost layer */
+        }
+    </style>
+</head>
+<body>
+    <div id="imageContainer">
+        <img id="background" src="" alt="Background">
+        <img id="torso" src="" alt="Torso">
+        <img id="head" src="" alt="Head">
+        <img id="icon" src="" alt="Icon">
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
